@@ -1,4 +1,4 @@
-const movie_count = 30;
+const movie_count = 29;
 const movie1 = document.querySelector(".image1");
 const movie2 = document.querySelector(".image2");
 const movie3 = document.querySelector(".image3");
@@ -63,9 +63,9 @@ const posters = [
 const titles = [
     "12 Angry Men",
     "500 Days of Summer",
-    "2001: a Space Odessey",
+    "2001: a Space Odyssey",
     "The Dictator",
-    "About Time",
+    "Shrek",
     "Ace Ventura",
     "IT",
     "Dr. Strangelove",
@@ -83,22 +83,20 @@ const titles = [
     "Friday the 13th",
     "War for the Planet of the Apes",
     "The Shining",
-    "First Blood",
+    "Rambo: First Blood",
     "A Nightmare on Elm Street",
     "The Shawshank Redemption",
     "Schindler's List",
     "Star Wars",
     "Terminator",
-    "Grown Ups",
-    "Shrek",
-    "Star Wars"
+    "Grown Ups"
 ];
 const links = [
     "./pages/12angrymen.html",
     "./pages/500daysofsummer.html",
     "./pages/2001aspaceodessey.html",
     "./pages/thedictator.html",
-    "./pages/abouttime.html",
+    "./pages/shrek.html",
     "./pages/aceventura.html",
     "./pages/it.html",
     "./pages/drstrangelove.html",
@@ -108,23 +106,21 @@ const links = [
     "./pages/theinterview.html",
     "./pages/jurassicpark.html",
     "./pages/justgowithit.html",
-    "./pages/killbillvol1.html",
+    "./pages/killbill.html",
     "./pages/lalaland.html",
     "./pages/soul.html",
-    "./pages/matrix.html",
+    "./pages/thematrix.html",
     "./pages/titanic.html",
     "./pages/fridaythe13th.html",
     "./pages/warfortheplanetoftheapes.html",
     "./pages/theshining.html",
-    "./pages/firstblood.html",
+    "./pages/rambo.html",
     "./pages/anightmareonelmstreet.html",
     "./pages/theshawshankredemption.html",
     "./pages/schindlerslist.html",
     "./pages/starwars.html",
     "./pages/terminator.html",
-    "./pages/grownups.html",
-    "./pages/shrek.html",
-    "./pages/starwars.html"
+    "./pages/grownups.html"
 ];
 
 let random = Math.floor(Math.random() * movie_count);

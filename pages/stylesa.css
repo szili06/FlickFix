@@ -1,0 +1,160 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  @media (max-width: 900px){
+    header{
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  @media (max-width: 600px){
+    .hero .container h2 {
+      font-size: 1.5em;
+    }
+    
+    .hero .container p {
+      font-size: 0.8em;
+      margin-top: 20px;
+    }
+  
+    header nav ul{
+      display: flex;
+      flex-direction: column;
+    }
+    header nav ul li{
+      margin: 10px 0;
+    }
+  }
+  
+  header .container{
+    display: flex;
+  }
+  
+  header h1 {
+    font-size: 2.5em;
+    float: left;
+    color: darkred;
+  }
+  header img {
+    float: left;
+    height: 2.5em;
+    padding-right: 10px;
+  }
+  nav {
+    margin-top: 10px;
+    float: right;
+    margin-right: 30px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  nav ul li a:hover {
+    color: darkred;
+    transition: ease 0.2s;
+  }
+  
+  *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: Arial, sans-serif;
+    background: #666;
+    color:#fff;
+  }
+  footer{
+    display: block;
+    background: #333;
+    padding: 10px;
+  }
+  div{
+    display:block;
+  }
+  p{
+    display:block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start:0px;
+    margin-inline-end: 0px;
+  }
+  
+  
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 10px;
+  }
+  p {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .star-container {
+    text-align: center;
+     }
+  .star {
+    color: gold;
+    font-size: 24px;
+  }
+  img {
+    max-width: 350px;
+    max-height: 350px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  #numberInput {
+    text-align: center;
+    width: 300px;
+    background:#333;
+    margin: 0 auto; 
+    display: block; 
+    padding: 3px 0px;
+    color:#fff;
+  }
+  numberInput::placeholder{
+    color:#fff;
+  }
+  div h2{
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .trailerContainer {
+    width: 80%;
+    margin: 50px 10%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  .trailer {
+    width: 80%;
+    height:400px;
+    margin-left:10%;
+  }
+  header nav ul li:nth-child(2) a{
+    color:darkred;
+  }
