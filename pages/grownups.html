@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grown Ups</title>
+
+    <style>
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  @media (max-width: 900px){
+    header{
+      flex-direction: column;
+      align-items: center;
+    }
+    header nav{
+      margin-top: 30px;
+    }
+  }
+  
+  @media (max-width: 600px){
+    .hero .container h2 {
+      font-size: 1.5em;
+    }
+    
+    .hero .container p {
+      font-size: 0.8em;
+      margin-top: 20px;
+    }
+  }
+  
+  header .container{
+    display: flex;
+  }
+  
+  header h1 {
+    font-size: 2.5em;
+    float: left;
+    color: darkred;
+  }
+  header img {
+    float: left;
+    height: 2.5em;
+    padding-right: 10px;
+  }
+  nav {
+    margin-top: 10px;
+    float: right;
+    margin-right: 30px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 60px 5px;
+  }
+  nav ul li a:hover {
+    color: darkred;
+    transition: ease 0.2s;
+  }
+  
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    background: #666;
+    color:#fff;
+}
+footer{
+    display: block;
+    background: #333;
+    padding: 10px;
+}
+div{
+    display:block;
+}
+p{
+    display:block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start:0px;
+    margin-inline-end: 0px;
+}
+
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 10px;
+}
+p {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.star-container {
+    text-align: center;
+     }
+.star {
+    color: gold;
+    font-size: 24px;
+}
+img {
+    max-width: 350px;
+    max-height: 350px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+#numberInput {
+    text-align: center;
+    width: 300px;
+    background:#333;
+    margin: 0 auto; 
+    display: block; 
+    padding: 3px 0px;
+    color:#fff;
+}
+numberInput::placeholder{
+    color:#fff;
+}
+div h2{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.trailerContainer {
+    width: 80%;
+    margin: 50px 10%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.trailer {
+    width: 80%;
+    height:400px;
+    margin-left:10%;
+}
+header nav ul li:nth-child(1) a{
+    color:darkred;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html">
+          <div class="container">
+            <img src="/src/favicon.png">
+            <h1>FlickFix</h1>
+          </div>
+        </a>
+          <nav>
+            <ul>
+              <li><a href="../action.html">Action</a></li>
+              <li><a href="../animation.html">Animation</a></li>
+              <li><a href="../comedy.html">Comedy</a></li>
+              <li><a href="../drama.html">Drama</a></li>
+              <li><a href="../horror.html">Horror</a></li>
+              <li><a href="../scifi.html">Sci-fi</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+        
+
+    <div class="content">
+        <img src="GrownUps.jpg" alt="La La Land" width="350" height="350">
+        <div style="margin-left: 40px;" >
+            <h2>Grown Ups</h2>
+            <p>Grown Ups is another classic comedy film written and directed by Adam Sandler, starring himself alongside stars such as Chris Rock, Kevin James, David Spade and Rob Schneider.
+                The story centers around five friends who meet again decades later after their school basketball team wins. The former team is reunited for a weekend trip where they learn about the importance of life and friendship while getting into various funny and entertaining situations.
+                The movie "Big Boys" is full of funny and emotional moments and shows the importance of life and the value of human relationships. Adam Sandler and the rest of the stars give entertaining and heartwarming performances, and the film has many scenes that viewers will remember and love for a long time.
+                "Big Boys" is a great choice for those who like good-humored comedies and a movie that is guaranteed to put a smile on your face and a warm feeling in your heart. If you like Adam Sandler movies and stories about friendship, "Big Boys" will be a real gem of movie entertainment!                
+                </p>
+            <input type="number" id="numberInput" placeholder="Rate this movie from 1 to 10" min="1" max="10" >
+            <p>Viewers' average rating:</p>
+            <div id="averageDisplay" display="flex"  ></div>
+        </div>
+    </div>
+    
+    <figure class="trailerContainer">
+        <iframe class="trailer" src="https://www.youtube.com/embed/e01NVCveGkg?si=kIbZGsMbLHM_tqkP"  ></iframe>
+    </figure> 
+    
+    <footer>
+        <div class="contaner">
+            <p>
+                &copy 2024 flickFlix
+            </p>
+        </div>
+    </footer>
+     <script>
+    let sum = parseFloat(localStorage.getItem('sumgrown')) || 0;
+let count = parseInt(localStorage.getItem('countgrown')) || 0;
+updateAverage();
+
+document.getElementById('numberInput').addEventListener('keypress', function(event) {
+    if (event.keyCode === 13) {
+        let number = parseFloat(this.value);
+        if (number >= 1 && number <= 10) {
+            sum += number;
+            count++;
+            localStorage.setItem('sumgrown', sum.toString());
+            localStorage.setItem('countgrown', count.toString());
+            updateAverage();
+            this.value = '';
+        }
+    }
+});
+
+function updateAverage() {
+    if (count > 0) {
+        let average = sum / count;
+        let roundedAverage = Math.round(average);
+        let stars = '';
+        for (let i = 0; i < roundedAverage; i++) {
+            stars += '★';
+        }
+        document.getElementById('averageDisplay').innerHTML = '<div class="star-container"><div class="star">' + stars + '</div></div>';
+    }
+}
+
+</script>
+</body>
+</html>
