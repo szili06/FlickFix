@@ -1,4 +1,4 @@
-const movie_count = 28;
+const movie_count = 30;
 const movie1 = document.querySelector(".image1");
 const movie2 = document.querySelector(".image2");
 const movie3 = document.querySelector(".image3");
@@ -11,6 +11,20 @@ const title3 = document.querySelector(".title3");
 const title4 = document.querySelector(".title4");
 const title5 = document.querySelector(".title5");
 const title6 = document.querySelector(".title6");
+const plink1 = document.querySelector(".link1");
+const plink2 = document.querySelector(".link2");
+const plink3 = document.querySelector(".link3");
+const plink4 = document.querySelector(".link4");
+const plink5 = document.querySelector(".link5");
+const plink6 = document.querySelector(".link6");
+const explore = document.querySelector(".explore")
+
+explore.addEventListener("click",exploreNow);
+
+function exploreNow(){
+    const movie = Math.ceil(Math.random() * movie_count);
+    window.location.href = links[movie];
+}
 
 let frequency = [];
 const posters = [
@@ -41,7 +55,10 @@ const posters = [
     "src/poster/Poster (25).jpg",
     "src/poster/Poster (26).jpg",
     "src/poster/Poster (27).jpg",
-    "src/poster/Poster (28).jpg"
+    "src/poster/Poster (28).jpg",
+    "src/poster/Poster (29).jpg",
+    "src/poster/Poster (30).jpg",
+    "src/poster/Poster (31).jpg"
 ];
 const titles = [
     "12 Angry Men",
@@ -71,41 +88,84 @@ const titles = [
     "The Shawshank Redemption",
     "Schindler's List",
     "Star Wars",
-    "Terminator"
+    "Terminator",
+    "Grown Ups",
+    "Shrek",
+    "Star Wars"
 ];
+const links = [
+    "./pages/12angrymen.html",
+    "./pages/500daysofsummer.html",
+    "./pages/2001aspaceodessey.html",
+    "./pages/thedictator.html",
+    "./pages/abouttime.html",
+    "./pages/aceventura.html",
+    "./pages/it.html",
+    "./pages/drstrangelove.html",
+    "./pages/thefastandthefurious.html",
+    "./pages/howtotrainyourdragon.html",
+    "./pages/thelionking.html",
+    "./pages/theinterview.html",
+    "./pages/jurassicpark.html",
+    "./pages/justgowithit.html",
+    "./pages/killbillvol1.html",
+    "./pages/lalaland.html",
+    "./pages/soul.html",
+    "./pages/matrix.html",
+    "./pages/titanic.html",
+    "./pages/fridaythe13th.html",
+    "./pages/warfortheplanetoftheapes.html",
+    "./pages/theshining.html",
+    "./pages/firstblood.html",
+    "./pages/anightmareonelmstreet.html",
+    "./pages/theshawshankredemption.html",
+    "./pages/schindlerslist.html",
+    "./pages/starwars.html",
+    "./pages/terminator.html",
+    "./pages/grownups.html",
+    "./pages/shrek.html",
+    "./pages/starwars.html"
+];
+
 let random = Math.floor(Math.random() * movie_count);
 movie1.style.backgroundImage = `url('${posters[random]}')`;
 title1.textContent = titles[random];
+plink1.setAttribute("href",links[random]);
 frequency[random] = 1;
 do{
     random = Math.floor(Math.random() * movie_count);
 }while(frequency[random]);
 movie2.style.backgroundImage = `url('${posters[random]}')`;
 title2.textContent = titles[random];
+plink2.setAttribute("href",links[random]);
 frequency[random] = 1;
 do{
     random = Math.floor(Math.random() * movie_count);
 }while(frequency[random]);
 movie3.style.backgroundImage = `url('${posters[random]}')`;
 title3.textContent = titles[random];
+plink3.setAttribute("href",links[random]);
 frequency[random] = 1;
 do{
     random = Math.floor(Math.random() * movie_count);
 }while(frequency[random]);
 movie4.style.backgroundImage = `url('${posters[random]}')`;
 title4.textContent = titles[random];
+plink4.setAttribute("href",links[random]);
 frequency[random] = 1;
 do{
     random = Math.floor(Math.random() * movie_count);
 }while(frequency[random]);
 movie5.style.backgroundImage = `url('${posters[random]}')`;
 title5.textContent = titles[random];
+plink5.href = links[random];
 frequency[random] = 1;
 do{
     random = Math.floor(Math.random() * movie_count);
 }while(frequency[random]);
 movie6.style.backgroundImage = `url('${posters[random]}')`;
 title6.textContent = titles[random];
+plink6.setAttribute("href",links[random]);
 
 let slideIndex = Math.ceil(Math.random() * 6);
 const slides = document.getElementsByClassName("slide");
